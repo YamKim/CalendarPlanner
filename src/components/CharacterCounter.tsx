@@ -1,16 +1,16 @@
 import React from "react";
 
-import { atom, selector, useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 
-import {} from '../state/character'
+import { charCountState, textState } from "@/state/character";
+
+import {} from "../state/character";
 
 function CharacterCount() {
   const count = useRecoilValue(charCountState);
 
   return <>Character Count: {count}</>;
 }
-
-
 
 function TextInput() {
   const [text, setText] = useRecoilState(textState);
